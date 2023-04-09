@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 
 namespace ASP.NET_MVC_CRUD_APP.Models
@@ -10,7 +11,8 @@ namespace ASP.NET_MVC_CRUD_APP.Models
         [Required]
         public string Title { get; set; }
         public string Author { get; set; }
-        public DateTime PublisedYear { get; set; } = DateTime.Now;
+        [DisplayName("Published Year")]
+		public DateTime PublisedYear { get; set; } = DateTime.Now;
 
     }
 }
